@@ -70,9 +70,9 @@ const ReferenceCard = ({ reference }) => {
   }, [active]);
 
   return (
-    <div className="border-b-[1px] border-white ">
+    <div className="border-b-[1px] border-white">
       <div
-        className="text-[28px] font-thin hover:font-medium transition-all cursor-pointer flex flex-row justify-between items-center bg-black"
+        className="text-[28px] font-mori font-light hover:font-semibold cursor-pointer transition-all flex flex-row justify-between items-center bg-black"
         onClick={toggleActive}
       >
         <div>
@@ -153,8 +153,8 @@ const References = () => {
   return (
     <div className="p-10 w-[80%] mx-auto">
       <div className="pb-10">
-        <h2 className="flex flex-row items-center text-[50px]">
-          Geselecteerde projecten <FaArrowTurnDown className="pl-4" />
+        <h2 className="flex flex-row items-center text-4xl">
+          Geselecteerde projecten
         </h2>
       </div>
       <div className="flex flex-col">

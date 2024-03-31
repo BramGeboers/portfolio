@@ -59,12 +59,12 @@ const Hero = () => {
 
   return (
     <div
-      className="flex items-center justify-center w-[100%] h-[100vh] flex-col overflow-hidden font-mori"
+      className="flex items-center justify-center w-[100%] h-[100vh] flex-col overflow-hidden font-mori font-semibold"
       ref={heroContainer}
     >
       <div>
         <div className="flex flex-row items-baseline">
-          <h1 className="text-[264px] font-semibold leading-[240px]" ref={t1}>
+          <h1 className="text-[264px] leading-[240px] " ref={t1}>
             BRAM
           </h1>
           <div className="absolute -translate-x-[150px] translate-y-[50px]">
@@ -74,7 +74,7 @@ const Hero = () => {
             <Image src={svg1} alt="SVG1" />
           </div>
         </div>
-        <h1 className="text-[264px] font-semibold leading-[240px]" ref={t2}>
+        <h1 className="text-[264px] leading-[240px]" ref={t2}>
           GEBOERS
         </h1>
         <div className="flex overflow-hidden translate-x-4">

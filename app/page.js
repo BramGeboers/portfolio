@@ -2,10 +2,10 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
-import Filler from '../components/Filler'
 import Intro from '../components/Intro'
 import References from '../components/References'
 import Footer from '@/components/Footer'
+import FotoScroll from '@/components/FotoScroll'
 
 const page = () => {
 
@@ -15,6 +15,7 @@ const page = () => {
       <Hero/>
       <Intro/>
       <References/>
+      <FotoScroll/>
       <Footer/>
     </main>
   )

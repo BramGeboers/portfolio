@@ -12,10 +12,7 @@ export const DateTime = () => {
 
   return (
     <div>
-      <p>
-        {" "}
-        BRU : {date.toLocaleTimeString()} - {date.toLocaleDateString()}
-      </p>
+      <p> BRU {date.toLocaleTimeString()}</p>
     </div>
   );
 };

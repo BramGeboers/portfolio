@@ -13,7 +13,8 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily:{
-        mori: ['var(--font-mori)']
+        mori: 'var(--font-mori)',
+        poppins: 'var(--font-poppins)'
       }
     },
   },
