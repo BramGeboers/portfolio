@@ -1,25 +1,23 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { FaArrowTurnDown } from "react-icons/fa6";
+import { references } from "../constants";
 import Image from "next/image";
 import { gsap } from "gsap";
-import { references } from "../constants";
 
 const ReferenceCard = ({ reference }) => {
-  const [hover, SetHover] = useState(false);
+  const [active, setActive] = useState(false);
 
-  const tl = useRef();
+  const t1 = useRef();
 
-  const tech1 = useRef();
-  const tech2 = useRef();
-  const tech3 = useRef();
+  const techComponent = [useRef(null), useRef(null), useRef(null)];
 
-  const toggleHover = () => {
-    SetHover(!hover);
+  const toggleActive = () => {
+    setActive(!active);
   };
 
-  const imageRef = useRef();
+  const tl = useRef();
 
   useEffect(() => {
     tl.current = gsap.timeline({
@@ -27,90 +25,125 @@ const ReferenceCard = ({ reference }) => {
     });
 
     tl.current.to(
-      imageRef.current,
+      t1.current,
       {
-        duration: 0.3,
-        opacity: 1,
-        y: "0",
+        duration: 0.5,
+        height: "auto",
         ease: "power3.inOut",
       },
-      0.1
+      0
     ),
       tl.current.to(
-        tech1.current,
+        techComponent[0].current,
         {
-          duration: 0.5,
-          opacity: 1,
-          y: "0",
+          duration: 0.6,
+          y: 0,
           ease: "power3.inOut",
+          delay: 0.2,
         },
-        0.1
+        0
       ),
       tl.current.to(
-        tech2.current,
+        techComponent[1].current,
         {
-          duration: 0.5,
-          opacity: 1,
-          y: "0",
+          duration: 0.6,
+          y: 0,
           ease: "power3.inOut",
-        },
-        0.2
-      ),
-      tl.current.to(
-        tech3.current,
-        {
-          duration: 0.5,
-          opacity: 1,
-          y: "0",
-          ease: "power3.inOut",
+          delay: 0.4,
         },
         0
       );
+    tl.current.to(
+      techComponent[2].current,
+      {
+        duration: 0.6,
+        y: 0,
+        ease: "power3.inOut",
+        delay: 0.6,
+      },
+      0
+    );
   }, []);
 
   useEffect(() => {
-    hover ? tl.current.play() : tl.current.reverse();
-  }, [hover]);
+    active ? tl.current.play() : tl.current.reverse();
+  }, [active]);
 
   return (
-    <div
-      onMouseEnter={toggleHover}
-      onMouseLeave={toggleHover}
-      className="p-10 border-b-4 border-white cursor-pointer relative flex flex-row h-[200px] items-center"
-    >
-      <Link
-        href={`/references/${reference.link}`}
-        className="text-[50px] pr-40"
-      >
-        {reference.title}
-      </Link>
-
-      <div className="overflow-hidden flex text-green-600 text-3xl pointer-events-none translate-y-32 translate-x-10">
-        <p className="translate-y-full opacity-0" ref={tech1}>
-          {reference.tech1}
-        </p>
-      </div>
-
+    <div className="border-b-[1px] border-white ">
       <div
-        className="rounded-md object-cover object-center translate-y-20 opacity-0 pointer-events-none justify-around"
-        ref={imageRef}
+        className="text-[28px] font-thin hover:font-medium transition-all cursor-pointer flex flex-row justify-between items-center bg-black"
+        onClick={toggleActive}
       >
-        <Image
-          src={reference.image}
-          className="w-[350px] h-[350px] ease-in-out"
-        />
+        <div>
+          <p className="text-[165px] uppercase">{reference.title}</p>
+        </div>
+        <svg
+          className={
+            active
+              ? "rotate-90 transition-all ease-in-out"
+              : "transition-all ease-in-out"
+          }
+          width="82"
+          height="82"
+          viewBox="0 0 82 82"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 28L77 28"
+            stroke="white"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M53 4L76.9167 27.9167L53 51.8333"
+            stroke="white"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
       </div>
+      <div
+        className="flex flex-row items-center gap-4 justify-evenly mb-10 h-0 overflow-hidden z-0"
+        ref={t1}
+      >
+        <Image className="h-60 w-80" src={reference.image} />
+        <div>
+          <ul className="flex flex-col gap-4 text-2xl">
+            <li className="text-green-500 overflow-hidden">
+              <p className="translate-y-full" ref={techComponent[0]}>
+                {reference.tech1}
+              </p>
+            </li>
+            <li className="text-red-500 overflow-hidden">
+              <p className="translate-y-full" ref={techComponent[1]}>
+                {reference.tech2}
+              </p>
+            </li>
+            <li className="text-yellow-500 overflow-hidden">
+              <p className="translate-y-full" ref={techComponent[2]}>
+                {reference.tech3}
+              </p>
+            </li>
+          </ul>
+        </div>
 
-      <div className="overflow-hidden flex text-red-600 text-3xl pointer-events-none -translate-y-32 -translate-x-72">
-        <p className="-translate-y-full opacity-0" ref={tech2}>
-          {reference.tech2}
-        </p>
-      </div>
-
-      <div className="overflow-hidden flex text-yellow-600 text-3xl pointer-events-none translate-y-16 -translate-x-64">
-        <p className="translate-y-full opacity-0" ref={tech3}>
-          {reference.tech3}
-        </p>
+        <div className="max-w-[500px]">
+          <p className="pb-4">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum deleniti atque corrupti quos
+            dolores et quas molestias excepturi sint occaecati cupiditate non
+            provident, similique sunt in culpa qui officia deserunt mollitia
+            animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis
+            est et expedita distinctio.
+          </p>
+          <Link href={`cases/${reference.link}`} className="text-blue-500">
+            Case Study ➜
+          </Link>
+        </div>
       </div>
     </div>
   );
@@ -119,12 +152,10 @@ const ReferenceCard = ({ reference }) => {
 const References = () => {
   return (
     <div className="p-10 w-[80%] mx-auto">
-      <div>
-        <div>
-          <h2 className="flex flex-row items-center text-[50px]">
-            Geselecteerde projecten <FaArrowTurnDown className="pl-4" />
-          </h2>
-        </div>
+      <div className="pb-10">
+        <h2 className="flex flex-row items-center text-[50px]">
+          Geselecteerde projecten <FaArrowTurnDown className="pl-4" />
+        </h2>
       </div>
       <div className="flex flex-col">
         {references.map((reference, index) => (

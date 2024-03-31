@@ -2,9 +2,9 @@ import image1 from "../public/test.jpg"
 
 const references = [
     {
-      title: "Pannenkoekenboot",
+      title: "Car4Rent",
       image: image1,
-      link: "pannenkoekenboot",
+      link: "car4rent",
       variable1: 30,
       variable2: -150,
       tech1: "UI/UX",
@@ -23,7 +23,7 @@ const references = [
     {
       title: "Kevin Dhond",
       image: image1,
-      link: "kdhond",
+      link: "kevin_dhond",
       variable1: 120,
       variable2: 60,
       tech1: "FRONT-END",
