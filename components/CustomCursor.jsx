@@ -1,68 +1,40 @@
 "use client";
 
-import React from "react";
+import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
-import { useRef, useEffect, useState } from "react";
-
-const CURSOR_COLORS = {
-  h1: "green-400",
-  button: "orange-500",
-  default: "sky-500",
-};
-
-const CustomCursor = () => {
-  const cursorRef = useRef(null);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [cursorColor, setCursorColor] = useState("sky-500");
-  const [clicked, setClicked] = useState(false);
+const Mousefollow = () => {
+  const [point, setPoint] = useState({ x: 0, y: 0 });
+  const { x, y } = point;
+  const ref = useRef();
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      setPosition({
-        x: e.clientX,
-        y: e.clientY,
-      });
-    };
-    const handleMouseDown = () => {
-      setClicked(true);
-      setTimeout(() => {
-        setClicked(false);
-      }, 800);
-    };
-    const handleMouseOver = (e) => {
-      const tagName = e.target.tagName.toLowerCase();
-      setCursorColor(CURSOR_COLORS[tagName] || CURSOR_COLORS["default"]);
+    if (!ref.current) return;
+
+    const handlePointerMove = ({ clientX, clientY }) => {
+      const element = ref.current;
+
+      const x = clientX - element.offsetLeft - element.offsetWidth / 2;
+      const y = clientY - element.offsetTop - element.offsetHeight / 2;
+      setPoint({ x, y });
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("mousedown", handleMouseDown);
-    window.addEventListener("mouseover", handleMouseOver);
+    window.addEventListener("pointermove", handlePointerMove);
+
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mousedown", handleMouseDown);
-      window.removeEventListener("mouseover", handleMouseOver);
+      window.removeEventListener("pointermove", handlePointerMove);
     };
   }, []);
+
   return (
-    <>
-      <div
-        style={{ top: position.y, left: position.x }}
-        ref={cursorRef}
-        className={`fixed pointer-events-none transition-all -translate-x-1/2 -translate-y-1/2 z-50 ease-in duration-300 rounded-full w-3 h-3 bg-${cursorColor}`}
-      />
-      <div
-        style={{ top: position.y, left: position.x }}
-        ref={cursorRef}
-        className={`p-0 fixed pointer-events-none transition-all -translate-x-1/2 -translate-y-1/2 z-50 ease-in duration-500 rounded-full w-8 h-8 border-2 border-${cursorColor} `}
-      >
-        <div
-          className={`w-8 h-8 ${
-            clicked ? "scale-100 opacity-30" : "scale-0 opacity-0"
-          } -translate-x-[1px] -translate-y-[1px] rounded-full bg-${cursorColor} ease-in transition-all duration-500 -z-10`}
-        />
-      </div>
-    </>
+    <div
+      ref={ref}
+      className="fixed top-0 left-0 w-[50px] h-[50px] rounded-full z-[1000] bg-red-500 mix-blend-difference pointer-events-none"
+      style={{
+        transform: `translate(${x}px, ${y}px)`,
+      }}
+    ></div>
   );
 };
 
-export default CustomCursor;
+export default Mousefollow;
