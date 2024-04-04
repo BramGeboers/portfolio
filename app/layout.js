@@ -1,8 +1,7 @@
 import { Inter } from "next/font/google";
 import { Poppins } from 'next/font/google'
 import localfont from "next/font/local"
-// import SmoothScrolling from "@/components/SmoothScrolling";
-import CustomCursor from '@/components/CustomCursor'
+import SmoothScrolling from "@/components/SmoothScrolling";
 
 import "./globals.css";
 
@@ -39,12 +38,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${mori.variable} font-mori`}>
+    <html lang="en" className={`${mori.variable} font-mori cursor-none`}>
       <body className={poppins.className}>
-        <CustomCursor />
-        {/* <SmoothScrolling> */}
+        <SmoothScrolling>
           {children}
-          {/* </SmoothScrolling> */}
+        </SmoothScrolling>
       </body>
     </html>
 

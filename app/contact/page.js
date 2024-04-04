@@ -1,18 +1,45 @@
-import React from 'react'
-import Navbar from '../../components/Navbar'
-import Hero from '../../components/Hero'
-import Filler from '../../components/Filler'
-import References from '../../components/Referencesbackup'
-import SvgTest from "../../components/SvgTest"
-import Arrow from "../../components/Arrow"
+// ParentComponent.js
+"use client"
+import React from 'react';
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import Intro from '@/components/Intro';
+import References from '@/components/References';
+import Footer from '@/components/Footer';
+import FotoScroll from '@/components/FotoScroll';
+import CustomCursor from '@/components/CustomCursor';
 
-const page = () => {
+import { useState } from "react";
+
+const ParentComponent = () => {
+
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleHeroHoverEnter = () => {
+    setIsHovering(true)
+  };
+
+  const handleHeroHoverLeave = () => {
+    setIsHovering(false)
+  };
+
   return (
     <main className='bg-black'>
-      <Navbar/>
-      <Arrow />
+      <CustomCursor
+        isHovering={isHovering}
+      />
+      <Navbar
+        onHoverEnter={handleHeroHoverEnter}
+        onHoverLeave={handleHeroHoverLeave}/>
+      <Hero/>
+      <Intro/>
+      <References
+        onHoverEnter={handleHeroHoverEnter}
+        onHoverLeave={handleHeroHoverLeave}/>
+      <FotoScroll/>
+      <Footer/>
     </main>
-  )
-}
+  );
+};
 
-export default page
+export default ParentComponent;

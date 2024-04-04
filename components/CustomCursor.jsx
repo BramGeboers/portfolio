@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { gsap } from "gsap";
 
-const Mousefollow = () => {
+const Mousefollow = ({ isHovering }) => {
   const [point, setPoint] = useState({ x: 0, y: 0 });
   const { x, y } = point;
   const ref = useRef();
@@ -26,10 +26,31 @@ const Mousefollow = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const element = ref.current;
+    const tl = gsap.timeline();
+
+    if (isHovering) {
+      tl.to(element, {
+        duration: 0.3,
+        width: 80,
+        height: 80,
+        backgroundColor: "#34d399",
+      });
+    } else {
+      tl.to(element, {
+        duration: 0.3,
+        width: 50,
+        height: 50,
+        backgroundColor: "#ef4444",
+      });
+    }
+  }, [isHovering]);
+
   return (
     <div
       ref={ref}
-      className="fixed top-0 left-0 w-[50px] h-[50px] rounded-full z-[1000] bg-red-500 mix-blend-difference pointer-events-none"
+      className="fixed -top-20 -left-20 w-[50px] h-[50px] rounded-full z-[1000] bg-red-500 mix-blend-difference pointer-events-none"
       style={{
         transform: `translate(${x}px, ${y}px)`,
       }}

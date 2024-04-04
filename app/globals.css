@@ -16,6 +16,7 @@
   }
 }
 
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -36,8 +37,13 @@
   background: #555;
 }
 
+button {
+  cursor: none;
+}
+
 
 body {
+  cursor: none;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -47,8 +53,22 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+a {
+  cursor: none !important; /* Hide cursor when hovering over links */
+  text-decoration: none; /* Remove default underline */
+  color: inherit; /* Inherit text color */
+}
+
+a:hover {
+  cursor: none !important;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.hide-cursor {
+  cursor: none !important;
 }

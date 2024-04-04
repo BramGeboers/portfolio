@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
 import { gsap } from "gsap";
-import { useLayoutEffect, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import svg1 from "../public/chevrons-left.svg";
 import Image from "next/image";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Arrow from "../components/Arrow";
 
 const Hero = () => {
@@ -15,6 +16,8 @@ const Hero = () => {
   const heroContainer = useRef();
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
     let ctx = gsap.context(() => {
       gsap.from(t1.current, { y: "40%", opacity: 0, delay: 0.6 });
       gsap.from(t2.current, { y: "40%", opacity: 0, delay: 0.9 });
@@ -26,17 +29,6 @@ const Hero = () => {
   }, []);
 
   useEffect(() => {
-    let bounceTl = gsap.timeline({ repeat: -1 });
-    bounceTl.to(
-      imageRef.current,
-      { x: 100, ease: "power1.inOut", duration: 1 },
-      0.1
-    );
-    bounceTl.to(imageRef.current, { x: 0, ease: "power1.inOut", duration: 1 });
-    return () => bounceTl.kill();
-  }, []);
-
-  useEffect(() => {
     gsap.to(t1.current, {
       x: "-20%",
       scrollTrigger: {
@@ -45,16 +37,17 @@ const Hero = () => {
         end: "bottom top",
         scrub: 2,
       },
-    }),
-      gsap.to(t2.current, {
-        x: "20%",
-        scrollTrigger: {
-          trigger: heroContainer.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: 2,
-        },
-      });
+    });
+
+    gsap.to(t2.current, {
+      x: "20%",
+      scrollTrigger: {
+        trigger: heroContainer.current,
+        start: "top top",
+        end: "bottom top",
+        scrub: 2,
+      },
+    });
   }, []);
 
   return (

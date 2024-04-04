@@ -1,12 +1,20 @@
 "use client";
-import { PiStarFourFill } from "react-icons/pi";
 import React, { useState, useRef, useEffect } from "react";
-import { navItems } from "../constants";
 import Link from "next/link";
 import { gsap } from "gsap";
 import { Squeeze as Hamburger } from "hamburger-react";
 
-const Navbar = () => {
+const Navbar = ({ onHoverEnter, onHoverLeave }) => {
+  const handleMouseEnter = () => {
+    onHoverEnter();
+  };
+
+  const handleMouseLeave = () => {
+    onHoverLeave();
+  };
+
+  const [opened, setOpened] = useState(false);
+
   const [navOpen, setNavOpen] = useState(false);
 
   const [isOpen, setOpen] = useState(false);
@@ -85,7 +93,11 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="font-mori text-6xl absolute z-30 flex justify-between w-full">
+      <div
+        className="font-mori text-6xl absolute z-30 flex justify-between w-full"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         <Link
           href="/"
           className=" hover:text-red-500 ease-in-out duration-500 top-10 left-10 fixed"
@@ -95,8 +107,17 @@ const Navbar = () => {
             G
           </span>{" "}
         </Link>
-        <div className="top-10 right-10 fixed">
-          <Hamburger toggled={isOpen} rounded toggle={toggleNav} />
+        <div
+          className="top-10 right-10 fixed"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <Hamburger
+            toggled={isOpen}
+            rounded
+            toggle={toggleNav}
+            className="cursor-none"
+          />
         </div>
       </div>
       <div
@@ -106,7 +127,7 @@ const Navbar = () => {
         <div className="flex flex-col font-mori" ref={navMenuRef}>
           <Link
             href="/"
-            className="bg-black-200 text-red-950 leading-[230px] cursor-pointer text-[260px] flex hover:text-green-600 ease-in-out transition-all duration-700"
+            className="bg-black-200 text-red-950 leading-[230px] text-[260px] flex hover:text-green-600 ease-in-out transition-all duration-700"
             ref={navCom[0]}
           >
             <div className="translate-y-full opacity-0" ref={navComponent[0]}>
@@ -116,19 +137,29 @@ const Navbar = () => {
 
           <Link
             href="/about"
-            className="bg-black-200 leading-[230px] cursor-pointer text-[260px] flex hover:text-green-600 ease-in-out transition-all duration-700"
+            className="bg-black-200 leading-[230px] text-[260px] flex hover:text-green-600 ease-in-out transition-all duration-700"
             ref={navCom[1]}
           >
-            <div className="translate-y-full opacity-0" ref={navComponent[1]}>
+            <div
+              className="translate-y-full opacity-0"
+              ref={navComponent[1]}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
               aBOUT
             </div>
           </Link>
           <Link
             href="/contact"
-            className="bg-black-200 leading-[230px] cursor-pointer text-[260px] flex hover:text-green-600 ease-in-out transition-all duration-700"
+            className="bg-black-200 leading-[230px] text-[260px] flex hover:text-green-600 ease-in-out transition-all duration-700"
             ref={navCom[2]}
           >
-            <div className="translate-y-full opacity-0" ref={navComponent[2]}>
+            <div
+              className="translate-y-full opacity-0"
+              ref={navComponent[2]}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
               cONTACT
             </div>
           </Link>

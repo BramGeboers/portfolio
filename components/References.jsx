@@ -6,8 +6,16 @@ import { references } from "../constants";
 import Image from "next/image";
 import { gsap } from "gsap";
 
-const ReferenceCard = ({ reference }) => {
+const ReferenceCard = ({ reference, onHoverEnter, onHoverLeave }) => {
   const [active, setActive] = useState(false);
+
+  const handleMouseEnter = () => {
+    onHoverEnter();
+  };
+
+  const handleMouseLeave = () => {
+    onHoverLeave();
+  };
 
   const t1 = useRef();
 
@@ -72,13 +80,15 @@ const ReferenceCard = ({ reference }) => {
   return (
     <div className="border-b-[1px] border-white">
       <div
-        className="text-[28px] font-mori font-light hover:font-semibold cursor-pointer transition-all flex flex-row justify-between items-center bg-black"
+        className="text-[28px] font-mori font-light hover:font-semibold transition-all flex flex-row justify-between items-center bg-black"
         onClick={toggleActive}
       >
-        <div>
+        <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           <p className="text-[165px] uppercase">{reference.title}</p>
         </div>
         <svg
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
           className={
             active
               ? "rotate-90 transition-all ease-in-out"
@@ -149,7 +159,7 @@ const ReferenceCard = ({ reference }) => {
   );
 };
 
-const References = () => {
+const References = ({ onHoverEnter, onHoverLeave }) => {
   return (
     <div className="p-10 w-[80%] mx-auto">
       <div className="pb-10">
@@ -159,7 +169,12 @@ const References = () => {
       </div>
       <div className="flex flex-col">
         {references.map((reference, index) => (
-          <ReferenceCard key={index} reference={reference} />
+          <ReferenceCard
+            key={index}
+            reference={reference}
+            onHoverEnter={onHoverEnter}
+            onHoverLeave={onHoverLeave}
+          />
         ))}
       </div>
     </div>
