@@ -3,15 +3,15 @@ import Image from "next/image";
 import image1 from "@/public/images/mycareermock.png";
 import image2 from "@/public/images/KeKujs3bYVo.png";
 import image3 from "@/public/images/20210219-IMG_7135.webp";
-import image4 from "@/public/images/tt.png";
+import image4 from "@/public/images/WvuZRFdfd.png";
 
 const FotoScroll = () => {
   return (
     <div className="p-20 mx-0 my-auto">
-      <div className="sticky w-full h-[100vh] overflow-hidden top-0 text-center z-20 flex items-center justify-center">
-        <h1 className="mt-[60px] md:mt-0 mb-[40px] md:mb-0 drop-shadow text-[28px] md:text-[3.54167vw] md:max-w-[46vw] text-center mx-auto leading-[1.6] w-full leading-2">
-          Creativity isn't a destination reached with projects. It's a journey
-          that unfolds endlessly.
+      <div className="sticky w-full h-[100vh] overflow-hidden top-0 text-center z-10 flex items-center justify-center">
+        <h1 className="mt-[60px] md:mt-0 mb-[40px] md:mb-0 drop-shadow text-[28px] md:text-[3.54167vw] md:max-w-[50vw] text-center mx-auto leading-[1.6] w-full leading-2">
+          Creativity isn't a fixed endpoint achieved through projects; rather,
+          it's an infinite voyage of discovery and refinement.
         </h1>
       </div>
       <div className="w-full mx-auto max-w-[86vw] md:pb-[100vh] overflow-hidden">

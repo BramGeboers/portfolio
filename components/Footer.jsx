@@ -7,15 +7,13 @@ import { motion } from "framer-motion";
 const Footer = () => {
   const pathVariant1 = {
     hidden: {
-      opacity: 0,
       pathLength: 0,
       pathOffset: 0,
     },
     visible: {
-      opacity: 1,
       pathLength: 1,
       transition: {
-        duration: 4,
+        duration: 2.5,
         delay: 0.5,
         ease: "easeInOut",
       },
@@ -31,8 +29,8 @@ const Footer = () => {
       opacity: 1,
       pathLength: 1,
       transition: {
-        duration: 2,
-        delay: 4,
+        duration: 1.5,
+        delay: 2.5,
         ease: "easeInOut",
       },
     },
@@ -50,7 +48,7 @@ const Footer = () => {
             width={616}
             height={436}
             fill="none"
-            animate="visible"
+            whileInView="visible"
             initial="hidden"
             xmlns="http://www.w3.org/2000/svg"
           >
