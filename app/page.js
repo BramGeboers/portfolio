@@ -8,11 +8,12 @@ import References from '@/components/References';
 import Footer from '@/components/Footer';
 import FotoScroll from '@/components/FotoScroll';
 import CustomCursor from '@/components/CustomCursor';
-
 import { useState } from "react";
 
 const ParentComponent = () => {
 
+  const path = "/"
+  
   const [isHovering, setIsHovering] = useState(false);
 
   const handleHeroHoverEnter = () => {
@@ -29,6 +30,7 @@ const ParentComponent = () => {
         isHovering={isHovering}
       />
       <Navbar
+        pathname={path}
         onHoverEnter={handleHeroHoverEnter}
         onHoverLeave={handleHeroHoverLeave}/>
       <Hero/>

@@ -4,9 +4,16 @@ import Link from "next/link";
 import { gsap } from "gsap";
 import { Squeeze as Hamburger } from "hamburger-react";
 
-const Navbar = ({ onHoverEnter, onHoverLeave }) => {
+const Navbar = ({ onHoverEnter, onHoverLeave, pathname }) => {
   const handleMouseEnter = () => {
     onHoverEnter();
+  };
+
+  console.log(pathname);
+
+  const isActive = (path) => {
+    return pathname === path;
+    console.log(`${path} +  ${pathname} `);
   };
 
   const handleMouseLeave = () => {
@@ -127,8 +134,12 @@ const Navbar = ({ onHoverEnter, onHoverLeave }) => {
         <div className="flex flex-col font-mori" ref={navMenuRef}>
           <Link
             href="/"
-            className="bg-black-200 text-red-950 leading-[230px] text-[260px] flex hover:text-green-600 ease-in-out transition-all duration-700"
+            className={`${
+              isActive("/") ? "text-red-950" : "text-white"
+            } leading-[230px] text-[260px] flex hover:text-green-600 ease-in-out transition-all duration-700`}
             ref={navCom[0]}
+            onMouseEnter={!isActive("/") ? handleMouseEnter : undefined}
+            onMouseLeave={handleMouseLeave}
           >
             <div className="translate-y-full opacity-0" ref={navComponent[0]}>
               iNDEX
@@ -137,29 +148,28 @@ const Navbar = ({ onHoverEnter, onHoverLeave }) => {
 
           <Link
             href="/about"
-            className="bg-black-200 leading-[230px] text-[260px] flex hover:text-green-600 ease-in-out transition-all duration-700"
+            className={`${
+              isActive("/about") ? "text-red-950" : "text-white"
+            } leading-[230px] text-[260px] flex hover:text-green-600 ease-in-out transition-all duration-700`}
             ref={navCom[1]}
+            onMouseEnter={!isActive("/about") ? handleMouseEnter : undefined}
+            onMouseLeave={handleMouseLeave}
           >
-            <div
-              className="translate-y-full opacity-0"
-              ref={navComponent[1]}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
+            <div className="translate-y-full opacity-0" ref={navComponent[1]}>
               aBOUT
             </div>
           </Link>
+
           <Link
             href="/contact"
-            className="bg-black-200 leading-[230px] text-[260px] flex hover:text-green-600 ease-in-out transition-all duration-700"
+            className={`${
+              isActive("/contact") ? "text-red-950" : "text-white"
+            } leading-[230px] text-[260px] flex hover:text-green-600 ease-in-out transition-all duration-700`}
             ref={navCom[2]}
+            onMouseEnter={!isActive("/contact") ? handleMouseEnter : undefined}
+            onMouseLeave={handleMouseLeave}
           >
-            <div
-              className="translate-y-full opacity-0"
-              ref={navComponent[2]}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
+            <div className="translate-y-full opacity-0" ref={navComponent[2]}>
               cONTACT
             </div>
           </Link>
