@@ -69,9 +69,9 @@ const Footer = () => {
           </motion.svg>
 
           <p className="text-[50px] pt-8 font-medium">
-            bramgeboers2@gmail.com
+            bram00002@gmail.com
             <br />
-            +32)04-9464-7893
+            +32)04-9464-0000
           </p>
         </div>
       </div>
