@@ -2,12 +2,9 @@
 "use client"
 import React from 'react';
 import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
-import Intro from '@/components/Intro';
-import References from '@/components/References';
 import Footer from '@/components/Footer';
-import FotoScroll from '@/components/FotoScroll';
 import CustomCursor from '@/components/CustomCursor';
+import About from '@/components/About'
 import { useState } from "react";
 
 const ParentComponent = () => {
@@ -33,12 +30,7 @@ const ParentComponent = () => {
         pathname={path}
         onHoverEnter={handleHeroHoverEnter}
         onHoverLeave={handleHeroHoverLeave}/>
-      <Hero/>
-      <Intro/>
-      <References
-        onHoverEnter={handleHeroHoverEnter}
-        onHoverLeave={handleHeroHoverLeave}/>
-      <FotoScroll/>
+      <About/>
       <Footer/>
     </main>
   );

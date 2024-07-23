@@ -135,7 +135,7 @@ const Navbar = ({ onHoverEnter, onHoverLeave, pathname }) => {
           <Link
             href="/"
             className={`${
-              isActive("/") ? "text-red-950" : "text-white"
+              isActive("/") ? "text-red-950 italic" : "text-white"
             } leading-[230px] text-[260px] flex hover:text-green-600 ease-in-out transition-all duration-700`}
             ref={navCom[0]}
             onMouseEnter={!isActive("/") ? handleMouseEnter : undefined}
@@ -149,7 +149,7 @@ const Navbar = ({ onHoverEnter, onHoverLeave, pathname }) => {
           <Link
             href="/about"
             className={`${
-              isActive("/about") ? "text-red-950" : "text-white"
+              isActive("/about") ? "text-red-950 italic" : "text-white"
             } leading-[230px] text-[260px] flex hover:text-green-600 ease-in-out transition-all duration-700`}
             ref={navCom[1]}
             onMouseEnter={!isActive("/about") ? handleMouseEnter : undefined}
@@ -163,7 +163,7 @@ const Navbar = ({ onHoverEnter, onHoverLeave, pathname }) => {
           <Link
             href="/contact"
             className={`${
-              isActive("/contact") ? "text-red-950" : "text-white"
+              isActive("/contact") ? "text-red-950 italic" : "text-white"
             } leading-[230px] text-[260px] flex hover:text-green-600 ease-in-out transition-all duration-700`}
             ref={navCom[2]}
             onMouseEnter={!isActive("/contact") ? handleMouseEnter : undefined}

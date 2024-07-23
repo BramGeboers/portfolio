@@ -9,6 +9,7 @@ import Footer from '@/components/Footer';
 import FotoScroll from '@/components/FotoScroll';
 import CustomCursor from '@/components/CustomCursor';
 import { useState } from "react";
+import Contact from '@/components/Contact';
 
 const ParentComponent = () => {
 
@@ -33,12 +34,7 @@ const ParentComponent = () => {
         pathname={path}
         onHoverEnter={handleHeroHoverEnter}
         onHoverLeave={handleHeroHoverLeave}/>
-      <Hero/>
-      <Intro/>
-      <References
-        onHoverEnter={handleHeroHoverEnter}
-        onHoverLeave={handleHeroHoverLeave}/>
-      <FotoScroll/>
+      <Contact/>
       <Footer/>
     </main>
   );

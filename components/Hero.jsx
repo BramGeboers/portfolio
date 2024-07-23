@@ -10,6 +10,7 @@ import Arrow from "../components/Arrow";
 const Hero = () => {
   const app = useRef();
   const imageRef = useRef();
+  const tl = useRef();
   const t1 = useRef();
   const t2 = useRef();
   const t3 = useRef();
@@ -29,25 +30,21 @@ const Hero = () => {
   }, []);
 
   useEffect(() => {
-    gsap.to(t1.current, {
-      x: "-20%",
-      scrollTrigger: {
-        trigger: heroContainer.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: 2,
-      },
-    });
+    gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to(t2.current, {
-      x: "20%",
-      scrollTrigger: {
-        trigger: heroContainer.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: 2,
-      },
-    });
+    let ctx = gsap.context(() => {
+      tl.current = gsap.timeline(); // Initialize tl.current here
+
+      if (tl.current) {
+        tl.current.from(t1.current, { y: "40", opacity: 0, delay: 0.6 });
+        // You can add other animations here
+        // tl.current.from(t2.current, { y: "40%", opacity: 0, delay: 0.9 });
+        // tl.current.from(t3.current, { y: "0%", opacity: 0, delay: 1.4 });
+        // tl.current.from(imageRef.current, { y: "40%", opacity: 0, delay: 0.6 });
+      }
+    }, app.current);
+
+    return () => ctx.revert();
   }, []);
 
   return (

@@ -31,6 +31,37 @@ const references = [
       tech2: "REACT.JS"
     },
   ];
+
+const hobbies = [
+  {
+    name: "cycling",
+  },
+  {
+    name: "developing",
+  },
+  {
+    name: "cooking",
+  },
+  {
+    name: "ui/ux",
+  },
+  {
+    name: "art director",
+  },
+  {
+    name: "artist",
+  },
+  {
+    name: "traveller",
+  },
+  {
+    name: "dreamer",
+  },
+  {
+    name: "producer",
+  }
+  
+]
   
   const navItems = [
     {
@@ -45,4 +76,4 @@ const references = [
   ];
 
 
-  export { references, navItems };
+  export { references, navItems, hobbies };
