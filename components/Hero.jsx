@@ -29,24 +29,6 @@ const Hero = () => {
     return () => ctx.revert();
   }, []);
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    let ctx = gsap.context(() => {
-      tl.current = gsap.timeline(); // Initialize tl.current here
-
-      if (tl.current) {
-        tl.current.from(t1.current, { y: "40", opacity: 0, delay: 0.6 });
-        // You can add other animations here
-        // tl.current.from(t2.current, { y: "40%", opacity: 0, delay: 0.9 });
-        // tl.current.from(t3.current, { y: "0%", opacity: 0, delay: 1.4 });
-        // tl.current.from(imageRef.current, { y: "40%", opacity: 0, delay: 0.6 });
-      }
-    }, app.current);
-
-    return () => ctx.revert();
-  }, []);
-
   return (
     <div
       className="flex items-center justify-center w-[100%] h-[100vh] flex-col overflow-hidden font-mori font-semibold"
