@@ -2,7 +2,7 @@
 import React from "react";
 import { gsap } from "gsap";
 import { useRef, useEffect } from "react";
-import bram from "../public/image.jpeg";
+import bram from "../public/images/20190815-IMG_4287.webp";
 import Image from "next/image";
 import { hobbies } from "../constants";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
