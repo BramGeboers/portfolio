@@ -3,6 +3,7 @@ import React from "react";
 import { gsap } from "gsap";
 import { useRef, useEffect } from "react";
 import bram from "../public/images/20190815-IMG_4287.webp";
+import image2 from "../public/images/IMG20240717072244.jpg";
 import Image from "next/image";
 import { hobbies } from "../constants";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -52,8 +53,8 @@ const About = () => {
 
   return (
     <>
-      <div className="flex items-center justify-center w-[100%] h-[100vh] flex-col font-mori font-semibold text-center">
-        <p className="text-[208px] mt-[400px] mb-[-80px]" ref={t1}>
+      <div className="flex items-center justify-center w-[100%] flex-col font-mori font-semibold text-center">
+        <p className="text-[208px] mt-[200px] mb-[-80px]" ref={t1}>
           hi!
         </p>
         <p className="text-[100px]" ref={t2}>
@@ -62,14 +63,51 @@ const About = () => {
 
         <Image
           src={bram}
-          className="object-contain h-80 w-full my-20"
+          className="object-contain h-80 w-full mt-10 mb-20"
           ref={imageRef}
         />
+      </div>
+      <div className="flex w-full items-center justify-center overflow-visible pt-20 text-center font-semibold">
+        <svg
+          width="562"
+          height="160"
+          viewBox="0 -8 562 104"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3 39.0635C96 104.563 160.058 120.834 207 100.5C250.44 81.6826 287.928 -1.79452 337 7.5C383.098 16.2314 429.8 69.6453 472.46 67.9909C515.121 66.3365 544.342 45.0136 557 2"
+            id="curve"
+            // stroke="white"
+          />
+          <text className="text-[46px] font-mori tracking-widest">
+            <textPath href="#curve" fill="white">
+              My passions and hobbies
+            </textPath>
+          </text>
+        </svg>
       </div>
       <div className="flex flex-row flex-wrap max-w-[1300px] items-center justify-center mx-auto py-20">
         {hobbies.map((hobby, index) => (
           <Hobbyitem key={index} hobby={hobby} />
         ))}
+      </div>
+      <div className="my-20 flex flex-row items-center justify-center gap-32">
+        <div className="flex flex-col max-w-[600px]">
+          <h2> Lorem Ipsum </h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
+            necessitatibus quis et non fuga porro nostrum adipisci quod iste
+            ullam, quae provident officiis est! Ex quas exercitationem aliquid
+            corrupti molestiae.
+          </p>
+        </div>
+        <div>
+          <Image
+            src={image2}
+            className="object-contain h-[600px] w-full mt-10 mb-20"
+          />
+        </div>
       </div>
     </>
   );

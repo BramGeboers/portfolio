@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
 
-const Video = () => {
+const Video = ({ project }) => {
   return (
     <>
       <div className="w-full flex items-center justify-center mt-[137px] group">
-        <h1 className="absolute mix-blend-difference  translate-y-[25px] drop-shadow-xl text-[264px] font-mori leading-[240px] group-hover:opacity-0 transition-all duration-500">
-          CASE 01 <br /> CAR4RENT
+        <h1 className="absolute mix-blend-difference  translate-y-[25px] drop-shadow-xl text-[264px] font-mori leading-[240px] group-hover:opacity-0 transition-all duration-500 max-w-[80%]">
+          CASE {project.nr} <br /> {project.title}
         </h1>
         <video
           width="1820"
