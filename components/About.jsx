@@ -3,7 +3,7 @@ import React from "react";
 import { gsap } from "gsap";
 import { useRef, useEffect } from "react";
 import bram from "../public/images/20190815-IMG_4287.webp";
-import image2 from "../public/images/IMG20240717072244.jpg";
+import image2 from "../public/images/museum.jpeg";
 import Image from "next/image";
 import { hobbies } from "../constants";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -12,7 +12,7 @@ const Hobbyitem = ({ hobby }) => {
   return (
     <div className="border-white px-2 py-1 text-[75px] font-mori">
       <div>
-        <p className=" border-2 rounded-full px-4">{hobby.name}</p>
+        <p className=" border-2 rounded-full px-6">{hobby.name}</p>
       </div>
     </div>
   );
@@ -92,14 +92,17 @@ const About = () => {
           <Hobbyitem key={index} hobby={hobby} />
         ))}
       </div>
-      <div className="my-20 flex flex-row items-center justify-center gap-32">
-        <div className="flex flex-col max-w-[600px]">
-          <h2> Lorem Ipsum </h2>
+      <div className="my-20 flex flex-row items-center justify-center gap-32 text-lg">
+        <div className="flex flex-col max-w-[450px]">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
-            necessitatibus quis et non fuga porro nostrum adipisci quod iste
-            ullam, quae provident officiis est! Ex quas exercitationem aliquid
-            corrupti molestiae.
+            Hello! I’m Bram Geboers, a 20-year-old software developer currently
+            pursuing a degree in Applied Computer Science at UC Leuven Limburg.
+            This year, I’m excited to be expanding my academic and cultural
+            horizons by spending a semester abroad at Vilnius University in
+            Lithuania. My passion lies in creating innovative and efficient
+            software solutions, blending theory with hands-on projects to drive
+            impactful results. Welcome to my portfolio, where you can explore my
+            work and journey in the world of tech!
           </p>
         </div>
         <div>

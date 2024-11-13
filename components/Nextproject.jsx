@@ -6,7 +6,7 @@ const projectRoutes = [
   "/cases/car4rent",
   "/cases/tychothoelen",
   "/cases/kevindhond",
-  "/cases/mycareer",
+  "/cases/h2grow",
 ];
 
 const Nextproject = ({ currentSlug }) => {

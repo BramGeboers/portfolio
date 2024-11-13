@@ -29,6 +29,7 @@ const references = [
       title: "Car4Rent",
       image: image1,
       link: "car4rent",
+      description: "Car4Rent is a car rental application that allows users to rent cars from different locations. The application is built using Next.js, Springboot, and Azure. The application is hosted on Azure and uses Azure's CosmosDB for the database. The application is built using a microservices architecture and uses Azure's Kubernetes Service for deployment.",
       variable1: 30,
       variable2: -150,
       tech1: "NEXT.JS",
@@ -36,23 +37,36 @@ const references = [
       tech3: "AZURE"
     },
     {
-      title: "MyCareer",
-      image: image1,
-      link: "mycareer",
-      variable1: 100,
-      variable2: 30,
-      tech1: "NEXT.JS",
-      tech2: "SPRINGBOOT",
-      tech3: "MIN.IO"
-    },
-    {
       title: "Kevin Dhond",
       image: image1,
-      link: "kevin_dhond",
+      description: "Kevin Dhond is a local landscaper who wanted to create a website to showcase his work and attract new clients. The website was built using React.js and features a clean, modern design that highlights Kevin's landscaping services.",
+      link: "kevindhond",
       variable1: 120,
       variable2: 60,
       tech1: "UI/UX",
       tech2: "REACT.JS"
+    },
+    {
+      title: "T. Thoelen",
+      image: image1,
+      description: "Tycho Thoelen is a fellow student who does photography on the side. He wanted a website to showcase his work and attract new clients. The website was built using React.js and features a clean, modern design that highlights Tycho's photography services.",
+      link: "tychothoelen",
+      variable1: 120,
+      variable2: 60,
+      tech1: "UI/UX",
+      tech2: "REACT.JS"
+    },
+    {
+      title: "H2GROW",
+      image: image1,
+      description: "H2Grow was a 3 week long project which aimed to developed a automated watering systems for plants. We used Three.js to create a 3D model for the plants adding a personal touch. The project was developed using Next.js, Springboot and Min.io.",
+      link: "h2grow",
+      variable1: 100,
+      variable2: 30,
+      tech1: "NEXT.JS",
+      tech2: "SPRINGBOOT",
+      tech3: "MIN.IO",
+      tech4: "THREE.JS"
     },
   ];
 

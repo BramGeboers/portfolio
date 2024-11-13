@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import image1 from "@/public/images/mycareermock.png";
 import image2 from "@/public/images/KeKujs3bYVo.png";
-import image3 from "@/public/images/20210219-IMG_7135.webp";
+import image3 from "@/public/images/h2growmockup.png";
 import image4 from "@/public/images/WvuZRFdfd.png";
 
 const FotoScroll = () => {

@@ -1,10 +1,10 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { FaArrowTurnDown } from "react-icons/fa6";
 import { references } from "../constants";
 import Image from "next/image";
 import { gsap } from "gsap";
+import { AiOutlineFileSearch } from "react-icons/ai";
 
 const ReferenceCard = ({ reference, onHoverEnter, onHoverLeave }) => {
   const [active, setActive] = useState(false);
@@ -19,7 +19,12 @@ const ReferenceCard = ({ reference, onHoverEnter, onHoverLeave }) => {
 
   const t1 = useRef();
 
-  const techComponent = [useRef(null), useRef(null), useRef(null)];
+  const techComponent = [
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+  ];
 
   const toggleActive = () => {
     setActive(!active);
@@ -70,7 +75,17 @@ const ReferenceCard = ({ reference, onHoverEnter, onHoverLeave }) => {
         delay: 0.6,
       },
       0
-    );
+    ),
+      tl.current.to(
+        techComponent[3].current,
+        {
+          duration: 0.6,
+          y: 0,
+          ease: "power3.inOut",
+          delay: 0.8,
+        },
+        0
+      );
   }, []);
 
   useEffect(() => {
@@ -138,18 +153,18 @@ const ReferenceCard = ({ reference, onHoverEnter, onHoverLeave }) => {
                 {reference.tech3}
               </p>
             </li>
+            {reference.tech4 && (
+              <li className="text-blue-500 overflow-hidden">
+                <p className="translate-y-full" ref={techComponent[3]}>
+                  {reference.tech4}
+                </p>
+              </li>
+            )}
           </ul>
         </div>
 
         <div className="max-w-[500px]">
-          <p className="pb-4">
-            At vero eos et accusamus et iusto odio dignissimos ducimus qui
-            blanditiis praesentium voluptatum deleniti atque corrupti quos
-            dolores et quas molestias excepturi sint occaecati cupiditate non
-            provident, similique sunt in culpa qui officia deserunt mollitia
-            animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis
-            est et expedita distinctio.
-          </p>
+          <p className="pb-4">{reference.description}</p>
           <Link href={`cases/${reference.link}`} className="text-blue-500">
             Case Study ➜
           </Link>
@@ -164,7 +179,8 @@ const References = ({ onHoverEnter, onHoverLeave }) => {
     <div className="p-10 w-[80%] mx-auto">
       <div className="pb-10">
         <h2 className="flex flex-row items-center text-4xl">
-          Geselecteerde projecten
+          Geselecteerde projecten{" "}
+          <AiOutlineFileSearch className="ml-3" color="red" />
         </h2>
       </div>
       <div className="flex flex-col">
