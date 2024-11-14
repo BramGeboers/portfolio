@@ -21,13 +21,13 @@ const Contact = () => {
   return (
     <div className="overflow-hidden relative">
       <div className="gap-8 mt-[137px] h-[726px] ml-[30vw] flex flex-col">
-        <ul className="flex flex-col">
+        <ul className="flex flex-col md:pl-0 pl-12">
           <li>bramge0002@gmail.com</li>
           <li>+32)04-9464-000</li>
           <li>info@bramgeboers.be</li>
         </ul>
 
-        <ul className="flex flex-col items-start">
+        <ul className="flex flex-col md:pl-0 pl-12 items-start">
           <li>
             <Link href={"/"}>index</Link>
           </li>
@@ -56,7 +56,7 @@ const Contact = () => {
       </div>
       <div ref={container}>
         <svg
-          className="h-[726px] absolute top-36 pointer-events-none py-2"
+          className="md:h-[750px] h-[100vh] absolute md:top-[6rem] top-[5rem] pointer-events-none md:py-2 overflow-hidden"
           width="1920"
           height="726"
           viewBox="0 0 1920 726"
