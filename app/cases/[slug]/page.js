@@ -8,7 +8,6 @@ import CustomCursor from '@/components/CustomCursor';
 import ProjectInfo from '@/components/ProjectInfo';
 import Nextproject from '@/components/Nextproject';
 import Highlights from '@/components/Highlights';
-import { m } from 'framer-motion';
 
 const projects = {
   car4rent: {
@@ -31,10 +30,13 @@ const projects = {
     info: "A personal portfolio website was developed for a hobby photographer to showcase their work in a visually appealing and organized manner. The website features a streamlined photo gallery, a biography, and a contact section, balancing aesthetics with user-friendly navigation to facilitate easy viewing and communication.",
     credits: "Bram Geboers / Tycho Thoelen ",
     tech: "React, Node.js, GSAP",
-    url: "/videos/media3.mkv", 
-    image1: "/images/tychothoelen1.jpg",
-    image2: "/images/tychothoelen2.jpg",
-    image3: "/images/tychothoelen3.jpg"
+    url: "/videos/media3.mkv",
+    highlight1: "Modern Simple Design",
+    highlight2: "GSAP Animations",
+    highlight3: "Simple Contact Form",
+    image1: "/images/tychothoelen1.png",
+    image2: "/images/tychothoelen2.png",
+    image3: "/images/tychothoelen3.png"
   },
   kevindhond: {
     nr: "03",
@@ -43,9 +45,12 @@ const projects = {
     credits: "Bram Geboers",
     tech: "React, NextJS, Tailwind CSS",
     url: "/videos/media2.mkv",
-    image1: "/images/kevindhond1.jpg",
-    image2: "/images/kevindhond2.jpg",
-    image3: "/images/kevindhond3.jpg",
+    highlight1: "Services showcase",
+    highlight2: "Extensive image galery",
+    highlight3: "E-mail contact form",
+    image1: "/images/kevindhond1.png",
+    image2: "/images/kevindhond2.png",
+    image3: "/images/kevindhond3.png",
     live: "https://kdhondnext.vercel.app/"
   },
   h2grow: {
@@ -55,9 +60,12 @@ const projects = {
     credits: "Wout Bosteels / Mathias Clement / Niels Wellens / Bram Geboers",
     tech: "Springboot, ReactJS, ThreeJS, MinIO",
     url: "/videos/media4.mkv",
-    image1: "/images/h2grow1.jpg", 
-    image2: "/images/h2grow2.jpg",
-    image3: "/images/h2grow3.jpg",
+    highlight1: "Interactive Game",
+    highlight2: "Pagination for Overview",
+    highlight3: "Admin Console to Manage Users",
+    image1: "/images/h2grow1.png", 
+    image2: "/images/h2grow2.png",
+    image3: "/images/h2grow3.png",
     source: "https://github.com/IT-Integratieproject/itip-groep19"
   }
 };
