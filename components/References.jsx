@@ -93,13 +93,15 @@ const ReferenceCard = ({ reference, onHoverEnter, onHoverLeave }) => {
   }, [active]);
 
   return (
-    <div className="border-b-[1px] border-white">
+    <div className="border-b-[1px] border-white mb-4">
       <div
-        className="text-[28px] font-mori font-light hover:font-semibold transition-all flex flex-row justify-between items-center bg-black"
+        className="text-lg md:text-[28px] font-mori font-light hover:font-semibold transition-all flex flex-row justify-between items-center bg-black p-6 md:p-1- lg:p-8 lg:mt-12"
         onClick={toggleActive}
       >
         <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-          <p className="text-[165px] uppercase">{reference.title}</p>
+          <p className="text-[36px] md:text-[70px] lg:text-[86px] xl:text-[110px] 2xl:text-[160px] uppercase">
+            {reference.title}
+          </p>
         </div>
         <svg
           onMouseEnter={handleMouseEnter}
@@ -109,8 +111,8 @@ const ReferenceCard = ({ reference, onHoverEnter, onHoverLeave }) => {
               ? "rotate-90 transition-all ease-in-out"
               : "transition-all ease-in-out"
           }
-          width="82"
-          height="82"
+          width="50"
+          height="50"
           viewBox="0 0 82 82"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -132,12 +134,12 @@ const ReferenceCard = ({ reference, onHoverEnter, onHoverLeave }) => {
         </svg>
       </div>
       <div
-        className="flex flex-row items-center gap-4 justify-evenly mb-10 h-0 overflow-hidden z-0"
+        className="flex flex-col md:flex-row items-center gap-4 justify-evenly mb-10 h-0 overflow-hidden z-0"
         ref={t1}
       >
-        <Image className="h-60 w-80" src={reference.image} />
+        <Image className="h-auto w-60 md:w-80 m-4" src={reference.image} />
         <div>
-          <ul className="flex flex-col gap-4 text-2xl">
+          <ul className="flex flex-col gap-2 md:gap-4 text-base md:text-2xl">
             <li className="text-green-500 overflow-hidden">
               <p className="translate-y-full" ref={techComponent[0]}>
                 {reference.tech1}
@@ -163,9 +165,12 @@ const ReferenceCard = ({ reference, onHoverEnter, onHoverLeave }) => {
           </ul>
         </div>
 
-        <div className="max-w-[500px]">
-          <p className="pb-4">{reference.description}</p>
-          <Link href={`cases/${reference.link}`} className="text-blue-500">
+        <div className="max-w-[90%] md:max-w-[500px]">
+          <p className="pb-4 text-sm md:text-base">{reference.description}</p>
+          <Link
+            href={`cases/${reference.link}`}
+            className="text-blue-500 text-sm md:text-base"
+          >
             Case Study ➜
           </Link>
         </div>
@@ -176,9 +181,9 @@ const ReferenceCard = ({ reference, onHoverEnter, onHoverLeave }) => {
 
 const References = ({ onHoverEnter, onHoverLeave }) => {
   return (
-    <div className="p-10 w-[80%] mx-auto">
-      <div className="pb-10">
-        <h2 className="flex flex-row items-center text-4xl">
+    <div className="p-4 md:p-10 w-full md:w-[90%] mx-auto">
+      <div className="pb-4 md:pb-10">
+        <h2 className="flex flex-row items-center text-2xl md:text-4xl">
           Geselecteerde projecten{" "}
           <AiOutlineFileSearch className="ml-3" color="red" />
         </h2>

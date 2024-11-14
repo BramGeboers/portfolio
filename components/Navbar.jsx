@@ -131,12 +131,15 @@ const Navbar = ({ onHoverEnter, onHoverLeave, pathname }) => {
         className="h-[100vh] w-full bg-black fixed top-0 left-0 z-20 flex items-center justify-center opacity-0 -translate-x-full"
         ref={navBackGround}
       >
-        <div className="flex flex-col font-mori" ref={navMenuRef}>
+        <div
+          className="flex flex-col font-mori lg:text-[260px] md:text-[180px] sm:text-[120px] text-[70px]"
+          ref={navMenuRef}
+        >
           <Link
             href="/"
             className={`${
               isActive("/") ? "text-red-950 italic" : "text-white"
-            } leading-[230px] text-[260px] flex hover:text-green-600 ease-in-out transition-all duration-700`}
+            } leading-[230px] flex hover:text-green-600 ease-in-out transition-all duration-700`}
             ref={navCom[0]}
             onMouseEnter={!isActive("/") ? handleMouseEnter : undefined}
             onMouseLeave={handleMouseLeave}
@@ -150,7 +153,7 @@ const Navbar = ({ onHoverEnter, onHoverLeave, pathname }) => {
             href="/about"
             className={`${
               isActive("/about") ? "text-red-950 italic" : "text-white"
-            } leading-[230px] text-[260px] flex hover:text-green-600 ease-in-out transition-all duration-700`}
+            } leading-[230px] flex hover:text-green-600 ease-in-out transition-all duration-700`}
             ref={navCom[1]}
             onMouseEnter={!isActive("/about") ? handleMouseEnter : undefined}
             onMouseLeave={handleMouseLeave}
@@ -164,7 +167,7 @@ const Navbar = ({ onHoverEnter, onHoverLeave, pathname }) => {
             href="/contact"
             className={`${
               isActive("/contact") ? "text-red-950 italic" : "text-white"
-            } leading-[230px] text-[260px] flex hover:text-green-600 ease-in-out transition-all duration-700`}
+            } leading-[230px] flex hover:text-green-600 ease-in-out transition-all duration-700`}
             ref={navCom[2]}
             onMouseEnter={!isActive("/contact") ? handleMouseEnter : undefined}
             onMouseLeave={handleMouseLeave}

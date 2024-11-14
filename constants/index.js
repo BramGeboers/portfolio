@@ -1,4 +1,8 @@
-import image1 from "../public/test.jpg"
+// import image1 from "../public/test.jpg"
+import image2 from "../public/images/Schermopname_7.png"
+import image1 from "../public/images/Schermopname_8.png"
+import image3 from "../public/images/Schermopname_9.png"
+import image4 from "../public/images/Schermopname_10.png"
 
 const infos =[
   {
@@ -27,7 +31,7 @@ const infos =[
 const references = [
     {
       title: "Car4Rent",
-      image: image1,
+      image: image4,
       link: "car4rent",
       description: "Car4Rent is a car rental application that allows users to rent cars from different locations. The application is built using Next.js, Springboot, and Azure. The application is hosted on Azure and uses Azure's CosmosDB for the database. The application is built using a microservices architecture and uses Azure's Kubernetes Service for deployment.",
       variable1: 30,
@@ -38,7 +42,7 @@ const references = [
     },
     {
       title: "Kevin Dhond",
-      image: image1,
+      image: image3,
       description: "Kevin Dhond is a local landscaper who wanted to create a website to showcase his work and attract new clients. The website was built using React.js and features a clean, modern design that highlights Kevin's landscaping services.",
       link: "kevindhond",
       variable1: 120,
@@ -58,7 +62,7 @@ const references = [
     },
     {
       title: "H2GROW",
-      image: image1,
+      image: image2,
       description: "H2Grow was a 3 week long project which aimed to developed a automated watering systems for plants. We used Three.js to create a 3D model for the plants adding a personal touch. The project was developed using Next.js, Springboot and Min.io.",
       link: "h2grow",
       variable1: 100,

@@ -21,40 +21,40 @@ const Intro = () => {
         end: "top center",
         scrub: 1,
       },
-    }),
-      gsap.to(Spans[1].current, {
-        color: "green",
-        scrollTrigger: {
-          trigger: Spans[1].current,
-          start: "center bottom",
-          end: "top center",
-          scrub: 1,
-        },
-      }),
-      gsap.to(Spans[2].current, {
-        color: "blue",
-        scrollTrigger: {
-          trigger: Spans[2].current,
-          start: "center bottom",
-          end: "top center",
-          scrub: 1,
-        },
-      }),
-      gsap.to(Spans[3].current, {
-        color: "yellow",
-        scrollTrigger: {
-          trigger: Spans[3].current,
-          start: "center bottom",
-          end: "top top",
-          scrub: 1,
-        },
-      });
+    });
+    gsap.to(Spans[1].current, {
+      color: "green",
+      scrollTrigger: {
+        trigger: Spans[1].current,
+        start: "center bottom",
+        end: "top center",
+        scrub: 1,
+      },
+    });
+    gsap.to(Spans[2].current, {
+      color: "blue",
+      scrollTrigger: {
+        trigger: Spans[2].current,
+        start: "center bottom",
+        end: "top center",
+        scrub: 1,
+      },
+    });
+    gsap.to(Spans[3].current, {
+      color: "yellow",
+      scrollTrigger: {
+        trigger: Spans[3].current,
+        start: "center bottom",
+        end: "top top",
+        scrub: 1,
+      },
+    });
   }, []);
 
   return (
-    <div className="pt-20 pb-60">
+    <div className="pt-10 md:pt-20 pb-40 md:pb-60">
       <div
-        className="max-w-[850px] mx-auto text-4xl text-center"
+        className="max-w-[90%] md:max-w-[850px] mx-auto text-lg md:text-2xl lg:text-4xl text-center px-4"
         ref={container}
       >
         <p>
