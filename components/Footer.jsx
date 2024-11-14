@@ -37,7 +37,7 @@ const Footer = () => {
 
   return (
     <div className="flex flex-col p-4 sm:p-10">
-      <div className="flex flex-col lg:flex-row py-16 lg:py-32 lg:px-32 items-center justify-between gap-10">
+      <div className="flex flex-col xl:flex-row py-16 lg:py-32 lg:px-32 items-center justify-between gap-10">
         <p className="text-4xl md:text-6xl lg:text-[175px] leading-tight font-medium text-center lg:text-left">
           Let's do <br /> things <br /> together
         </p>
@@ -68,9 +68,9 @@ const Footer = () => {
             />
           </motion.svg>
 
-          <p className="text-lg md:text-2xl lg:text-[50px] pt-4 md:pt-8 font-medium text-center lg:text-left">
+          <p className="text-lg md:text-2xl lg:text-[50px] pt-4 md:pt-8 font-medium text-center leading-normal lg:text-left">
             bram00002@gmail.com
-            <br />
+            <br /> <br />
             (+32)04-9464-0000
           </p>
         </div>

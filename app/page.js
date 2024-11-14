@@ -39,7 +39,7 @@ const ParentComponent = () => {
         onHoverEnter={handleHeroHoverEnter}
         onHoverLeave={handleHeroHoverLeave}/>
       <FotoScroll/>
-      {/* <Footer/> */}
+      <Footer/>
     </main>
   );
 };
