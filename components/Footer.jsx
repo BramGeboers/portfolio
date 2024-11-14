@@ -80,8 +80,7 @@ const Footer = () => {
         <li className="text-center">
           Bram Geboers - 20 <br /> ©Copyright 2024
         </li>
-        <li>LinkedIn</li>
-        <li>Facebook</li>
+        <Link href="https://www.linkedin.com/in/bramgeboers/">LinkedIn</Link>
         <li>
           <DateTime />
         </li>
