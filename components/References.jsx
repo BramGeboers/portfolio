@@ -95,7 +95,7 @@ const ReferenceCard = ({ reference, onHoverEnter, onHoverLeave }) => {
   return (
     <div className="border-b-[1px] border-white mb-4">
       <div
-        className="text-lg md:text-[28px] font-mori font-light hover:font-semibold transition-all flex flex-row justify-between items-center bg-black p-6 md:p-1- lg:p-8 lg:mt-12"
+        className="text-lg md:text-[28px] font-mori font-light hover:font-semibold transition-all flex flex-row justify-between items-center bg-black px-3 md:p-1- lg:p-8 lg:mt-12"
         onClick={toggleActive}
       >
         <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
@@ -171,7 +171,7 @@ const ReferenceCard = ({ reference, onHoverEnter, onHoverLeave }) => {
             href={`cases/${reference.link}`}
             className="text-blue-500 text-sm md:text-base"
           >
-            Case Study ➜
+            Discover More ➜
           </Link>
         </div>
       </div>
@@ -183,7 +183,7 @@ const References = ({ onHoverEnter, onHoverLeave }) => {
   return (
     <div className="p-4 md:p-10 w-full md:w-[90%] mx-auto">
       <div className="pb-4 md:pb-10">
-        <h2 className="flex flex-row items-center text-2xl md:text-4xl">
+        <h2 className="flex flex-row items-center text-2xl mb-4 md:text-4xl">
           Geselecteerde projecten{" "}
           <AiOutlineFileSearch className="ml-3" color="red" />
         </h2>

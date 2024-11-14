@@ -42,10 +42,10 @@ const Hero = () => {
           >
             BRAM
           </h1>
-          <div className="hidden lg:absolute -translate-x-[50px] md:-translate-x-[100px] lg:-translate-x-[150px] translate-y-[20px] md:translate-y-[30px] lg:translate-y-[50px]">
+          <div className="hidden xl:block absolute -translate-x-[50px] md:-translate-x-[100px] lg:-translate-x-[150px] translate-y-[20px] md:translate-y-[30px] lg:translate-y-[50px]">
             <Arrow />
           </div>
-          <div className="xl:hidden absolute w-full h-full -translate-x-[50px] md:-translate-x-[100px] lg:-translate-x-[150px] translate-y-[20px] md:translate-y-[30px] lg:translate-y-[50px]">
+          <div className="xl:hidden block absolute w-full h-full -translate-x-[50px] md:-translate-x-[100px] lg:-translate-x-[150px] translate-y-[20px] md:translate-y-[30px] lg:translate-y-[50px]">
             <Arrow2 />
           </div>
           <div ref={imageRef}>

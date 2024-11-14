@@ -132,14 +132,14 @@ const Navbar = ({ onHoverEnter, onHoverLeave, pathname }) => {
         ref={navBackGround}
       >
         <div
-          className="flex flex-col font-mori lg:text-[260px] md:text-[180px] sm:text-[120px] text-[70px]"
+          className="flex flex-col font-mori lg:text-[260px] lg:leading-[230px] md:text-[180px] md:leading-[150px] sm:text-[120px] sm:leading-[95px] leading-[70px] text-[70px]"
           ref={navMenuRef}
         >
           <Link
             href="/"
             className={`${
               isActive("/") ? "text-red-950 italic" : "text-white"
-            } leading-[230px] flex hover:text-green-600 ease-in-out transition-all duration-700`}
+            }  flex hover:text-green-600 ease-in-out transition-all duration-700`}
             ref={navCom[0]}
             onMouseEnter={!isActive("/") ? handleMouseEnter : undefined}
             onMouseLeave={handleMouseLeave}
@@ -153,7 +153,7 @@ const Navbar = ({ onHoverEnter, onHoverLeave, pathname }) => {
             href="/about"
             className={`${
               isActive("/about") ? "text-red-950 italic" : "text-white"
-            } leading-[230px] flex hover:text-green-600 ease-in-out transition-all duration-700`}
+            }  flex hover:text-green-600 ease-in-out transition-all duration-700`}
             ref={navCom[1]}
             onMouseEnter={!isActive("/about") ? handleMouseEnter : undefined}
             onMouseLeave={handleMouseLeave}
@@ -167,7 +167,7 @@ const Navbar = ({ onHoverEnter, onHoverLeave, pathname }) => {
             href="/contact"
             className={`${
               isActive("/contact") ? "text-red-950 italic" : "text-white"
-            } leading-[230px] flex hover:text-green-600 ease-in-out transition-all duration-700`}
+            }  flex hover:text-green-600 ease-in-out transition-all duration-700`}
             ref={navCom[2]}
             onMouseEnter={!isActive("/contact") ? handleMouseEnter : undefined}
             onMouseLeave={handleMouseLeave}

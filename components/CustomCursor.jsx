@@ -50,7 +50,7 @@ const Mousefollow = ({ isHovering }) => {
   return (
     <div
       ref={ref}
-      className="fixed -top-20 -left-20 w-[50px] h-[50px] rounded-full z-[1000] bg-red-500 mix-blend-difference pointer-events-none"
+      className="lg:block fixed hidden -top-20 -left-20 w-[50px] h-[50px] rounded-full z-[1000] bg-red-500 mix-blend-difference pointer-events-none"
       style={{
         transform: `translate(${x}px, ${y}px)`,
       }}
