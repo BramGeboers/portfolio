@@ -22,9 +22,8 @@ const Contact = () => {
     <div className="overflow-hidden relative">
       <div className="gap-8 mt-[137px] h-[726px] ml-[30vw] flex flex-col">
         <ul className="flex flex-col md:pl-0 pl-12">
-          <li>bramge0002@gmail.com</li>
-          <li>+32)04-9464-000</li>
-          <li>info@bramgeboers.be</li>
+          <li>bramgeboers2@gmail.com</li>
+          <li>+32)04-9464-7893</li>
         </ul>
 
         <ul className="flex flex-col md:pl-0 pl-12 items-start">
