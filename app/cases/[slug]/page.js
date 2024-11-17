@@ -49,9 +49,9 @@ const projects = {
     highlight1: "Services showcase",
     highlight2: "Extensive image galery",
     highlight3: "E-mail contact form",
-    image1: "/images/kevindhond1.png",
-    image2: "/images/kevindhond2.png",
-    image3: "/images/kevindhond3.png",
+    image1: "/images/kdhond1.png",
+    image2: "/images/kdhond2.png",
+    image3: "/images/kdhond3.png",
     live: "https://kdhondnext.vercel.app/"
   },
   h2grow: {
