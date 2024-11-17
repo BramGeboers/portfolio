@@ -2,6 +2,7 @@
 import React from "react";
 import DateTime from "@/components/DateTime";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Footer = () => {
   const pathVariant1 = {
