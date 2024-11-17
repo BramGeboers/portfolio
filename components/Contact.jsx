@@ -43,7 +43,10 @@ const Contact = () => {
             <Link href={"/cases"}>cases</Link>
           </li>
           <li className="pl-2">
-            <Link href={"/cases/mycareer"}>mycareer</Link>
+            <Link href={"/cases/kevindhond"}>kevin dhond</Link>
+          </li>
+          <li className="pl-2">
+            <Link href={"/cases/h2grow"}>H2GROW</Link>
           </li>
           <li className="pl-2">
             <Link href={"/cases/car4rent"}>car4rent</Link>
