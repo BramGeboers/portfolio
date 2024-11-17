@@ -58,7 +58,7 @@ const projects = {
     nr: "04",
     title: "H2GROW",
     info: "During a three-week project, we developed H2GROW, an advanced application that automates plant watering, tracks growth statistics, and enhances user interaction with creative 3D elements and gamified features. The goal of H2GROW was to offer an intuitive and efficient plant care solution, while also engaging users through immersive visualizations and a fun, game-like experience.",
-    credits: "Wout Bosteels / Mathias Clement / Niels Wellens / Bram Geboers",
+    credits: "Bram Geboers / Wout Paepen / Davy Bellens / Hugo Rohach / Kylian Van Arkkels / Joren Bex / Gleb Prokopchuk / Bart Arnalsteen",
     tech: "Springboot, ReactJS, ThreeJS, MinIO",
     url: "/videos/media4.mkv",
     highlight1: "Interactive Game",
