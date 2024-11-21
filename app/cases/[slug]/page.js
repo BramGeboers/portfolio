@@ -23,7 +23,7 @@ const projects = {
     image1: "/images/car4rent1.png",
     image2: "/images/car4rent2.png",
     image3: "/images/car4rent3.png",
-    source: "https://github.com/BramGeboers/car4rent"
+    source: "https://github.com/bramgeboers-UCLL/CAR4RENT"
   },
   tychothoelen:{
     nr: "02",
