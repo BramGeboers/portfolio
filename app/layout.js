@@ -38,7 +38,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${mori.variable} font-mori cursor-none`}>
+    <html lang="en" className={`${mori.variable} font-mori cursor-none text-white`}>
       <body className={poppins.className}>
         <SmoothScrolling>
           {children}
