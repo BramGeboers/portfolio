@@ -25,8 +25,39 @@ const projects = {
     image3: "/images/car4rent3.png",
     source: "https://github.com/bramgeboers-UCLL/CAR4RENT"
   },
-  tychothoelen:{
+    h2grow: {
     nr: "02",
+    title: "H2GROW",
+    info: "During a three-week project, we developed H2GROW, an advanced application that automates plant watering, tracks growth statistics, and enhances user interaction with creative 3D elements and gamified features. The goal of H2GROW was to offer an intuitive and efficient plant care solution, while also engaging users through immersive visualizations and a fun, game-like experience.",
+    credits: "Bram Geboers / Wout Paepen / Davy Bellens / Hugo Rohach / Kylian Van Arkkels / Joren Bex / Gleb Prokopchuk / Bart Arnalsteen",
+    tech: "Springboot, ReactJS, ThreeJS, MinIO",
+    url: "/videos/media4.mkv",
+    highlight1: "Interactive Game",
+    highlight2: "Pagination for Overview",
+    highlight3: "Admin Console to Manage Users",
+    image1: "/images/h2grow1.png", 
+    image2: "/images/h2grow2.png",
+    image3: "/images/h2grow3.png",
+    source: "https://github.com/BramGeboers/H2GROW"
+  },
+  molview: {
+    nr: "03",
+    title: "MOLVIEW",
+    info: "MolView is an advanced web-based application in progress that allows users to visualize and interact with molecular structures in 3D. The application provides a range of tools like mobius transformations to explore and analyze molecules, making it a valuable resource for students, researchers, and professionals in the field of chemistry and biochemistry.",
+    credits: "Bram Geboers",
+    tech: "NextJS, Typescript, ThreeJS",
+    url: "/videos/media5.mkv",
+    highlight1: "3D Visualization of Molecules",
+    highlight2: "Complex Mobius Transformations",
+    highlight3: "Simple and Intuitive Design",
+    image1: "/images/molview1.png", 
+    image2: "/images/molview2.png",
+    image3: "/images/molview3.png",
+    source: "https://github.com/BramGeboers/visualizationsofmolecules/",
+    live: "https://visualizationsofmolecules.vercel.app/"
+  },
+  tychothoelen:{
+    nr: "04",
     title: "TYCHO THOELEN",
     info: "A personal portfolio website was developed for a hobby photographer to showcase their work in a visually appealing and organized manner. The website features a streamlined photo gallery, a biography, and a contact section, balancing aesthetics with user-friendly navigation to facilitate easy viewing and communication.",
     credits: "Bram Geboers / Tycho Thoelen ",
@@ -40,7 +71,7 @@ const projects = {
     image3: "/images/tychothoelen3.png"
   },
   kevindhond: {
-    nr: "03",
+    nr: "05",
     title: "KEVIN DHOND",
     info: "To enhance the online presence of Tuinaanleg Kevin Dhond, a website was created to improve customer engagement. It provides service details, showcases past projects, and features an easy-to-use contact form. The design prioritizes clear navigation and accessibility, ensuring potential customers can quickly find information and connect with the business.",
     credits: "Bram Geboers",
@@ -52,23 +83,10 @@ const projects = {
     image1: "/images/kdhond1.png",
     image2: "/images/kdhond2.png",
     image3: "/images/kdhond3.png",
-    live: "https://kdhondnext.vercel.app/"
+    live: "https://kdhondnext.vercel.app/",
+    source: "https://github.com/BramGeboers/kdhondnext/"
   },
-  h2grow: {
-    nr: "04",
-    title: "H2GROW",
-    info: "During a three-week project, we developed H2GROW, an advanced application that automates plant watering, tracks growth statistics, and enhances user interaction with creative 3D elements and gamified features. The goal of H2GROW was to offer an intuitive and efficient plant care solution, while also engaging users through immersive visualizations and a fun, game-like experience.",
-    credits: "Bram Geboers / Wout Paepen / Davy Bellens / Hugo Rohach / Kylian Van Arkkels / Joren Bex / Gleb Prokopchuk / Bart Arnalsteen",
-    tech: "Springboot, ReactJS, ThreeJS, MinIO",
-    url: "/videos/media4.mkv",
-    highlight1: "Interactive Game",
-    highlight2: "Pagination for Overview",
-    highlight3: "Admin Console to Manage Users",
-    image1: "/images/h2grow1.png", 
-    image2: "/images/h2grow2.png",
-    image3: "/images/h2grow3.png",
-    source: "https://github.com/BramGeboers/H2GROW"
-  }
+
 };
 
 const ProjectPage = ({params: {slug}}) => {

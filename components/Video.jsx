@@ -12,25 +12,29 @@ const Video = ({ project, url }) => {
         </h1>
 
         {project.live && (
-          <Link
-            href={project.live}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute z-50 bottom-4 right-6 text-lg mix-blend-difference flex items-center md:text-2xl lg:bottom-6 lg:right-10 lg:text-3xl"
-          >
-            See Live <ImArrowUpRight2 className="ml-2" />
-          </Link>
+          <div className="absolute z-50 bottom-4 right-6 text-lg mix-blend-difference flex items-center md:text-2xl lg:bottom-6 lg:right-10 lg:text-3xl">
+            <Link
+              href={project.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-row"
+            >
+              See Live <ImArrowUpRight2 className="ml-2" />
+            </Link>
+          </div>
         )}
 
         {project.source && (
-          <Link
-            href={project.source}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute z-50 bottom-4 left-6 text-lg mix-blend-difference flex items-center md:text-2xl lg:bottom-6 lg:right-10 lg:text-3xl"
-          >
-            Source Code <ImArrowUpRight2 className="ml-2" />
-          </Link>
+          <div className="absolute z-40 bottom-4 left-6 text-lg mix-blend-difference flex items-center md:text-2xl lg:bottom-6 lg:right-10 lg:text-3xl">
+            <Link
+              href={project.source}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-row"
+            >
+              Source Code <ImArrowUpRight2 className="ml-2" />
+            </Link>
+          </div>
         )}
 
         <video

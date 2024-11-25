@@ -4,9 +4,10 @@ import Link from "next/link";
 
 const projectRoutes = [
   "/cases/car4rent",
-  "/cases/tychothoelen",
-  "/cases/kevindhond",
   "/cases/h2grow",
+  "/cases/molview",
+  "/cases/kevindhond",
+  "/cases/tychothoelen",
 ];
 
 const Nextproject = ({ currentSlug }) => {
