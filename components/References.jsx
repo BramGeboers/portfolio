@@ -184,7 +184,7 @@ const References = ({ onHoverEnter, onHoverLeave }) => {
     <div className="p-4 md:p-10 w-full md:w-[90%] mx-auto">
       <div className="pb-4 md:pb-10">
         <h2 className="flex flex-row items-center text-2xl mb-4 md:text-4xl">
-          Geselecteerde projecten{" "}
+          Selected Projects
           <AiOutlineFileSearch className="ml-3" color="red" />
         </h2>
       </div>
