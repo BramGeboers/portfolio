@@ -36,10 +36,10 @@ const projects = {
     highlight1: "Interactive Game",
     highlight2: "Pagination for Overview",
     highlight3: "Admin Console to Manage Users",
-    image1: "/images/h2grow1.png", 
+    image1: "/images/h2grow1.png",
     image2: "/images/h2grow2.png",
     image3: "/images/h2grow3.png",
-    source: "https://github.com/BramGeboers/H2GROW"
+    source: "https://github.com/BramGeboers/H2GROW",
   },
   molview: {
     nr: "03",
@@ -51,13 +51,13 @@ const projects = {
     highlight1: "3D Visualization of Molecules",
     highlight2: "Complex Mobius Transformations",
     highlight3: "Simple and Intuitive Design",
-    image1: "/images/molview1.png", 
+    image1: "/images/molview1.png",
     image2: "/images/molview2.png",
     image3: "/images/molview3.png",
     source: "https://github.com/BramGeboers/visualizationsofmolecules/",
-    live: "https://visualizationsofmolecules.vercel.app/"
+    live: "https://visualizationsofmolecules.vercel.app/",
   },
-  tychothoelen:{
+  tychothoelen: {
     nr: "04",
     title: "TYCHO THOELEN",
     info: "A personal portfolio website was developed for a hobby photographer to showcase their work in a visually appealing and organized manner. The website features a streamlined photo gallery, a biography, and a contact section, balancing aesthetics with user-friendly navigation to facilitate easy viewing and communication.",
@@ -69,7 +69,7 @@ const projects = {
     highlight3: "Simple Contact Form",
     image1: "/images/tychothoelen1.png",
     image2: "/images/tychothoelen2.png",
-    image3: "/images/tychothoelen3.png"
+    image3: "/images/tychothoelen3.png",
   },
   kevindhond: {
     nr: "05",
@@ -85,20 +85,17 @@ const projects = {
     image2: "/images/kdhond2.png",
     image3: "/images/kdhond3.png",
     live: "https://kdhondnext.vercel.app/",
-    source: "https://github.com/BramGeboers/kdhondnext/"
+    source: "https://github.com/BramGeboers/kdhondnext/",
   },
-
 };
 
-const ProjectPage = ({params: {slug}}) => {
-
+const ProjectPage = ({ params: { slug } }) => {
   const [isHovering, setIsHovering] = useState(false);
   const [loading, setLoading] = useState(true);
   const [project, setProject] = useState(null);
 
   useEffect(() => {
     if (slug) {
-      console.log('Slug:', slug);
       const projectData = projects[slug];
       if (projectData) {
         setProject(projectData);
@@ -124,9 +121,13 @@ const ProjectPage = ({params: {slug}}) => {
   }
 
   return (
-    <main className='bg-black'>
+    <main className="bg-black">
       <CustomCursor isHovering={isHovering} />
-      <Navbar pathname={`/cases/${slug}`} onHoverEnter={handleHeroHoverEnter} onHoverLeave={handleHeroHoverLeave} />
+      <Navbar
+        pathname={`/cases/${slug}`}
+        onHoverEnter={handleHeroHoverEnter}
+        onHoverLeave={handleHeroHoverLeave}
+      />
       <Video project={project} url={project.url} />
       <ProjectInfo project={project} />
       <Nextproject currentSlug={slug} />
