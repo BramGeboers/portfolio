@@ -1,35 +1,36 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import Video from '@/components/Video';
-import CustomCursor from '@/components/CustomCursor';
-import ProjectInfo from '@/components/ProjectInfo';
-import Nextproject from '@/components/Nextproject';
-import Highlights from '@/components/Highlights';
+import React, { useState, useEffect } from "react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Video from "@/components/Video";
+import CustomCursor from "@/components/CustomCursor";
+import ProjectInfo from "@/components/ProjectInfo";
+import Nextproject from "@/components/Nextproject";
+import Highlights from "@/components/Highlights";
 
 const projects = {
-  car4rent: {
+  cyclingmanager: {
     nr: "01",
-    title: "CAR4RENT",
-    info: "During our semester-long group project, we developed Car4Rent, a full-stack application aimed at creating a seamless platform for users to rent and rent out cars. The goal of the application was to deliver a user-friendly service that balanced functionality with a clean, intuitive interface.",
-    credits: "Bram Geboers / Loveleen Sidhu / Axel Jacobs / Torben Ombelets / Wout Paepen / Rein Van Wanseele",
-    tech: "Next.js, Springboot, Azure, SocketIO",
-    url: "/videos/Media1_2.mp4",
-    highlight1: "Chatbot Integration",
-    highlight2: "Interactive Car Selection",
-    highlight3: "Automatic Invoice Generation",
-    image1: "/images/car4rent1.png",
-    image2: "/images/car4rent2.png",
-    image3: "/images/car4rent3.png",
-    source: "https://github.com/bramgeboers-UCLL/CAR4RENT"
+    title: "CYCLING MANAGER",
+    info: "Cycling Manager is a full-stack application created to manage your own team and earn as much points as possible in the cycling world. The application allows users to create teams and compete against your friends, providing a comprehensive platform for cycling enthusiasts to engage with the sport.",
+    credits: "Bram Geboers, Sander Debroyer, Niels Wellens, Harmanpreeet Singh",
+    tech: "NextJS, Typescript, Java, Redux, Springboot, Jsoup, Tailwind CSS, Digital Ocean",
+    url: "/videos/media6.mkv",
+    highlight1: "Stage per stage results",
+    highlight2: "Modern UI with a detailed overview",
+    highlight3: "Clean and simple design",
+    image3: "/images/cyclingmanager1.png",
+    image1: "/images/cyclingmanager2.png",
+    image2: "/images/cyclingmanager3.png",
+    source: "https://github.com/SanderDebroyer-UCLL/cycling-manager-frontend",
   },
-    h2grow: {
+  h2grow: {
     nr: "02",
     title: "H2GROW",
     info: "During a three-week project, we developed H2GROW, an advanced application that automates plant watering, tracks growth statistics, and enhances user interaction with creative 3D elements and gamified features. The goal of H2GROW was to offer an intuitive and efficient plant care solution, while also engaging users through immersive visualizations and a fun, game-like experience.",
-    credits: "Bram Geboers / Wout Paepen / Davy Bellens / Hugo Rohach / Kylian Van Arkkels / Joren Bex / Gleb Prokopchuk / Bart Arnalsteen",
+    credits:
+      "Bram Geboers / Wout Paepen / Davy Bellens / Hugo Rohach / Kylian Van Arkkels / Joren Bex / Gleb Prokopchuk / Bart Arnalsteen",
     tech: "Springboot, ReactJS, ThreeJS, MinIO",
     url: "/videos/media4.mkv",
     highlight1: "Interactive Game",

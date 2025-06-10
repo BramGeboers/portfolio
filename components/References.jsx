@@ -99,7 +99,7 @@ const ReferenceCard = ({ reference, onHoverEnter, onHoverLeave }) => {
         onClick={toggleActive}
       >
         <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-          <p className="text-[36px] md:text-[70px] lg:text-[86px] xl:text-[110px] 2xl:text-[160px] uppercase">
+          <p className="text-[26px] md:text-[50px] lg:text-[76px] xl:text-[90px] 2xl:text-[140px] uppercase select-none">
             {reference.title}
           </p>
         </div>
@@ -184,7 +184,7 @@ const References = ({ onHoverEnter, onHoverLeave }) => {
     <div className="p-4 md:p-10 w-full md:w-[90%] mx-auto">
       <div className="pb-4 md:pb-10">
         <h2 className="flex flex-row items-center text-2xl mb-4 md:text-4xl">
-          Selected Projects
+          Geselecteerde projecten{" "}
           <AiOutlineFileSearch className="ml-3" color="red" />
         </h2>
       </div>

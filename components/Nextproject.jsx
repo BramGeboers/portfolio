@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 
 const projectRoutes = [
-  "/cases/car4rent",
+  "/cases/cyclingmanager",
   "/cases/h2grow",
   "/cases/molview",
   "/cases/kevindhond",
