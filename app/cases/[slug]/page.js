@@ -121,7 +121,7 @@ const ProjectPage = ({ params: { slug } }) => {
   }
 
   return (
-    <main className="bg-black">
+    <main className="bg-black text-white">
       <CustomCursor isHovering={isHovering} />
       <Navbar
         pathname={`/cases/${slug}`}
